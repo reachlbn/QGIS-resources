@@ -1,41 +1,189 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.4.0-Chugiak" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.6.1-Brighton" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+  <edittypes>
+    <edittype widgetv2type="TextEdit" name="OGC_FID">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="GEOMETRY">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="osm_id">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="osm_way_id">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="name">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="type">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="aeroway">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="amenity">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="admin_level">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="barrier">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="boundary">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="building">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="craft">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="geological">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="historic">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="land_area">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="landuse">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="leisure">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="man_made">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="military">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="natural">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="office">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="place">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="shop">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="sport">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="tourism">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+    <edittype widgetv2type="TextEdit" name="other_tags">
+      <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+    </edittype>
+  </edittypes>
   <renderer-v2 symbollevels="0" type="RuleRenderer">
-    <rules>
-      <rule filter="&quot;natural&quot; = 'water' or &quot;other_tags&quot; LIKE '%&quot;water&quot;%' or &quot;other_tags&quot; LIKE '%&quot;waterway&quot;%'" symbol="0" label="water"/>
-      <rule scalemaxdenom="400000" filter="&quot;landuse&quot; = 'forest' or &quot;leisure&quot; = 'park'" symbol="1" scalemindenom="1" label="forest &amp; park"/>
-      <rule filter=" &quot;aeroway&quot; is not null or &quot;landuse&quot; = 'industrial'" label="industrial"/>
-      <rule filter="&quot;landuse&quot; = 'residential'" label="residential"/>
+    <rules key="{0a597a1f-46f5-4c30-9d12-d814412cfc49}">
+      <rule filter="&quot;natural&quot; = 'water' or &quot;other_tags&quot; LIKE '%&quot;water&quot;%' or &quot;other_tags&quot; LIKE '%&quot;waterway&quot;%'" key="{7e355287-3ba8-499d-a4a1-87046f0c84a8}" symbol="0" label="water"/>
+      <rule scalemaxdenom="400000" filter="&quot;landuse&quot; = 'forest' or &quot;leisure&quot; = 'park'" key="{2ba23036-e3e4-42be-94b7-1ea1613ac4f3}" symbol="1" scalemindenom="1" label="forest &amp; park"/>
+      <rule filter=" &quot;aeroway&quot; is not null or &quot;landuse&quot; = 'industrial'" key="{6ced524a-ccd0-40cc-ae09-ef73a52b2753}" label="industrial"/>
+      <rule filter="&quot;landuse&quot; = 'residential'" key="{06a10f27-c808-4d26-8288-d9b431191efa}" symbol="2" label="residential"/>
+      <rule filter=" &quot;landuse&quot;  =  'military' " key="{e30377a8-f3ce-483b-b453-c4155dc170e9}" symbol="3" label="military"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="fill" name="0">
-        <layer pass="2" class="SimpleFill" locked="0">
+        <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
-          <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="219,219,219,255"/>
-          <prop k="color_border" v="114,133,132,255"/>
+          <prop k="color" v="166,206,227,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
           <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="114,133,132,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
           <prop k="style" v="solid"/>
-          <prop k="style_border" v="no"/>
-          <prop k="width_border" v="0.26"/>
         </layer>
       </symbol>
       <symbol alpha="1" type="fill" name="1">
         <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
-          <prop k="border_width_unit" v="MM"/>
           <prop k="color" v="228,228,228,255"/>
-          <prop k="color_border" v="0,0,0,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
           <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="0,0,0,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
           <prop k="style" v="dense5"/>
-          <prop k="style_border" v="no"/>
-          <prop k="width_border" v="0.26"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="fill" name="2">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0"/>
+          <prop k="color" v="239,239,239,255"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="175,179,138,255"/>
+          <prop k="outline_style" v="no"/>
+          <prop k="outline_width" v="0.26"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="solid"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="fill" name="3">
+        <layer pass="0" class="SimpleFill" locked="0">
+          <prop k="border_width_map_unit_scale" v="0,0"/>
+          <prop k="color" v="186,221,105,255"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0,0"/>
+          <prop k="offset_map_unit_scale" v="0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_color" v="227,26,28,255"/>
+          <prop k="outline_style" v="solid"/>
+          <prop k="outline_width" v="0.06"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <prop k="style" v="no"/>
+        </layer>
+        <layer pass="0" class="LinePatternFill" locked="0">
+          <prop k="angle" v="45"/>
+          <prop k="color" v="0,0,0,255"/>
+          <prop k="distance" v="5"/>
+          <prop k="distance_map_unit_scale" v="0,0"/>
+          <prop k="distance_unit" v="MM"/>
+          <prop k="line_width" v="0.5"/>
+          <prop k="line_width_map_unit_scale" v="0,0"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_map_unit_scale" v="0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="outline_width_map_unit_scale" v="0,0"/>
+          <prop k="outline_width_unit" v="MM"/>
+          <symbol alpha="1" type="line" name="@3@1">
+            <layer pass="0" class="SimpleLine" locked="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="227,26,28,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.1"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="0,0"/>
+            </layer>
+          </symbol>
         </layer>
       </symbol>
     </symbols>
@@ -70,7 +218,7 @@
     <property key="labeling/fieldName" value="CASE WHEN (&quot;natural&quot; = 'water' )&#xa;THEN &quot;name&quot; END"/>
     <property key="labeling/fontBold" value="false"/>
     <property key="labeling/fontCapitals" value="0"/>
-    <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
+    <property key="labeling/fontFamily" value=".Lucida Grande UI"/>
     <property key="labeling/fontItalic" value="false"/>
     <property key="labeling/fontLetterSpacing" value="0"/>
     <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -99,7 +247,7 @@
     <property key="labeling/minFeatureSize" value="5"/>
     <property key="labeling/multilineAlign" value="0"/>
     <property key="labeling/multilineHeight" value="1"/>
-    <property key="labeling/namedStyle" value="Normal"/>
+    <property key="labeling/namedStyle" value=""/>
     <property key="labeling/obstacle" value="true"/>
     <property key="labeling/placeDirectionSymbol" value="0"/>
     <property key="labeling/placement" value="1"/>
@@ -208,39 +356,10 @@
     <multilineenabled fieldname="" on=""/>
     <selectedonly on=""/>
   </labelattributes>
-  <edittypes>
-    <edittype labelontop="0" editable="1" name="OGC_FID"/>
-    <edittype labelontop="0" editable="1" name="GEOMETRY"/>
-    <edittype labelontop="0" editable="1" name="osm_id"/>
-    <edittype labelontop="0" editable="1" name="osm_way_id"/>
-    <edittype labelontop="0" editable="1" name="name"/>
-    <edittype labelontop="0" editable="1" name="type"/>
-    <edittype labelontop="0" editable="1" name="aeroway"/>
-    <edittype labelontop="0" editable="1" name="amenity"/>
-    <edittype labelontop="0" editable="1" name="admin_level"/>
-    <edittype labelontop="0" editable="1" name="barrier"/>
-    <edittype labelontop="0" editable="1" name="boundary"/>
-    <edittype labelontop="0" editable="1" name="building"/>
-    <edittype labelontop="0" editable="1" name="craft"/>
-    <edittype labelontop="0" editable="1" name="geological"/>
-    <edittype labelontop="0" editable="1" name="historic"/>
-    <edittype labelontop="0" editable="1" name="land_area"/>
-    <edittype labelontop="0" editable="1" name="landuse"/>
-    <edittype labelontop="0" editable="1" name="leisure"/>
-    <edittype labelontop="0" editable="1" name="man_made"/>
-    <edittype labelontop="0" editable="1" name="military"/>
-    <edittype labelontop="0" editable="1" name="natural"/>
-    <edittype labelontop="0" editable="1" name="office"/>
-    <edittype labelontop="0" editable="1" name="place"/>
-    <edittype labelontop="0" editable="1" name="shop"/>
-    <edittype labelontop="0" editable="1" name="sport"/>
-    <edittype labelontop="0" editable="1" name="tourism"/>
-    <edittype labelontop="0" editable="1" name="other_tags"/>
-  </edittypes>
   <editform>.</editform>
   <editforminit></editforminit>
   <featformsuppress>0</featformsuppress>
-  <annotationform>../../../../OSGeo4W64/bin</annotationform>
+  <annotationform>/Users/OSGeo4W64/bin</annotationform>
   <editorlayout>generatedlayout</editorlayout>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
